@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "211733100036",
+    "project_id": "apal-54e69",
+    "storage_bucket": "apal-54e69.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211733100036:android:ddbac993f67d070c452751",
+        "android_client_info": {
+          "package_name": "com.admin.apal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9jtWkbAdFUzrFbjpUXI6F2DPBYRWY5qE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
