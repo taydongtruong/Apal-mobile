@@ -4,13 +4,22 @@ import com.admin.apal.model.*
 import retrofit2.http.*
 
 interface ApiService {
-    // Đăng nhập dùng Form-data như bạn viết trong auth.py
+    // Đăng nhập dùng Form-data
     @FormUrlEncoded
     @POST("auth/login")
     suspend fun login(
         @Field("username") user: String,
         @Field("password") pass: String
     ): TokenResponse
+
+    // Đăng ký dùng Form-data
+    @FormUrlEncoded
+    @POST("auth/register")
+    suspend fun register(
+        @Field("username") username: String,
+        @Field("password") password: String,
+        @Field("role") role: String
+    ): RegisterResponse
 
     // Lấy danh sách chiến dịch đang chạy
     @GET("campaigns/active")

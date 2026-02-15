@@ -11,6 +11,17 @@ object SharedPrefs {
     private fun getPrefs(context: Context): SharedPreferences {
         return context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
     }
+    private const val KEY_FCM_TOKEN = "fcm_token"
+
+    fun saveFCMToken(context: Context, token: String) {
+        val prefs = context.getSharedPreferences("ApalPrefs", Context.MODE_PRIVATE)
+        prefs.edit().putString(KEY_FCM_TOKEN, token).apply()
+    }
+
+    fun getFCMToken(context: Context): String? {
+        val prefs = context.getSharedPreferences("ApalPrefs", Context.MODE_PRIVATE)
+        return prefs.getString(KEY_FCM_TOKEN, null)
+    }
 
     fun saveAuth(context: Context, token: String, role: String) {
         val editor = getPrefs(context).edit()
